@@ -73,7 +73,6 @@ public class App {
         System.out.println("Enter your expected graduation date:");
         str.append(in.nextLine() + "\t");
         System.out.println("Are you an undergraduate? Type 'y' or 'n' ");
-        str.append(in.nextLine() + "\n");
 
         in.close();
         return str.toString();
