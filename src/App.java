@@ -8,11 +8,28 @@ public class App {
     public static void main(String[] args) {
 
 
-        File database = new File("student_database.txt"); 
-         
+    File database = new File("student_database.txt"); 
+    createDatabase(database);
+
+
+
+    Scanner in = new Scanner(System.in);
+
+    System.out.println("Would you like to add another student");
+    String word = in.nextLine();
+
+    while(word.equals("y")){
         createDatabase(database);
+        System.out.println("Would you like to add another student");
+        word=in.nextLine();
+    }
+
+    in.close();
 
     }
+
+
+    
 
     static void createDatabase(File file){
         String header = "\tName\tTUID\tEmail Address\tPhone Number\tMajor\t Expected graduation\tUndergraduate Status";
@@ -29,12 +46,16 @@ public class App {
                 System.out.println("Student database created " + file.getName());
             } else {
                 appendToDatabase(file);
-                
             }
         } catch (Exception e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         } 
+
+
+
+        
+
     }
 
     static void appendToDatabase(File file){
@@ -53,8 +74,8 @@ public class App {
     }
 
     static String getInfo(){
+        Scanner in = new Scanner(System.in);
         StringBuilder str = new StringBuilder();
-      Scanner in = new Scanner(System.in);
         System.out.println("Enter your full name: ");
         str.append("\n" + in.nextLine() + "\t");
         System.out.println("Enter your TUID:");
@@ -73,9 +94,12 @@ public class App {
         System.out.println("Enter your expected graduation date:");
         str.append(in.nextLine() + "\t");
         System.out.println("Are you an undergraduate? Type 'y' or 'n' ");
+        str.append(in.nextLine() + "\t");
 
-        in.close();
+        
+        
         return str.toString();
+
 
 
     }

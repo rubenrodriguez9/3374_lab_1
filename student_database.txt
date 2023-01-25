@@ -1,0 +1,4 @@
+	Name	TUID	Email Address	Phone Number	Major	 Expected graduation	Undergraduate Status
+Ruben Rodriguez	123456789	asdf	d	d	d	d	
+asdlkfja;lsdkf	123456789	dsf	d	d	d	y	
+asldfkja;sldkfj;asfffdcn,mxnv.z,mvcn	123456789	asd	saf	f	f	f	
